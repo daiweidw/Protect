@@ -7,6 +7,8 @@
 
 #import "ViewController.h"
 #import "XLAlgorithmViewController.h"
+#import "XLRuntimeViewController.h"
+#import "XLLayoutViewController.h"
 
 #import "XLButtonCreater.h"
 
@@ -23,14 +25,38 @@
 }
 
 - (void)createButtons{
-    CGRect frame = CGRectMake(100, 150, 100, 20);
+    CGFloat y = 150;
+    
+    CGRect frame = CGRectMake(100, y, 100, 20);
     UIButton *algorithmButton = [XLButtonCreater createJumpButtonWithTitle:@"算法" frame:frame target:self action:@selector(jumpToAlgorithm)];
     [self.view addSubview:algorithmButton];
+    
+    y += 40;
+    
+    frame = CGRectMake(100, y, 100, 20);
+    UIButton *runtimeButton = [XLButtonCreater createJumpButtonWithTitle:@"运行时" frame:frame target:self action:@selector(jumpToRuntime)];
+    [self.view addSubview:runtimeButton];
+    
+    y += 40;
+    
+    frame = CGRectMake(100, y, 100, 20);
+    UIButton *layoutButton = [XLButtonCreater createJumpButtonWithTitle:@"布局" frame:frame target:self action:@selector(jumpToLayout)];
+    [self.view addSubview:layoutButton];
 }
 
 #pragma mark - actions
 - (void)jumpToAlgorithm{
     XLAlgorithmViewController *vc = [[XLAlgorithmViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)jumpToRuntime{
+    XLRuntimeViewController *vc = [[XLRuntimeViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)jumpToLayout{
+    XLLayoutViewController *vc = [[XLLayoutViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
