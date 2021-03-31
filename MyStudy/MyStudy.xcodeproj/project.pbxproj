@@ -22,6 +22,8 @@
 		5E5841CB25FA1D7A00F63B2B /* XLAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5841CA25FA1D7A00F63B2B /* XLAlgorithm.m */; };
 		5E66EC87260054F700E0BAC1 /* XLLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66EC86260054F700E0BAC1 /* XLLayoutViewController.m */; };
 		5E66EC8E2600554400E0BAC1 /* XLFrameBoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66EC8D2600554400E0BAC1 /* XLFrameBoundsViewController.m */; };
+		5E66EC98260080F700E0BAC1 /* XLGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66EC97260080F700E0BAC1 /* XLGestureViewController.m */; };
+		5E66ECA2260081C800E0BAC1 /* XLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66ECA1260081C800E0BAC1 /* XLBaseViewController.m */; };
 		5ED9B7CD25FB5B3600A872BF /* XLCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7CC25FB5B3600A872BF /* XLCate.m */; };
 		5ED9B7D625FB5B5500A872BF /* XLCate+Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7D525FB5B5500A872BF /* XLCate+Run.m */; };
 		5ED9B7DC25FB5B6200A872BF /* XLCate+Jump.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7DB25FB5B6200A872BF /* XLCate+Jump.m */; };
@@ -76,6 +78,10 @@
 		5E66EC86260054F700E0BAC1 /* XLLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLayoutViewController.m; sourceTree = "<group>"; };
 		5E66EC8C2600554400E0BAC1 /* XLFrameBoundsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLFrameBoundsViewController.h; sourceTree = "<group>"; };
 		5E66EC8D2600554400E0BAC1 /* XLFrameBoundsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLFrameBoundsViewController.m; sourceTree = "<group>"; };
+		5E66EC96260080F700E0BAC1 /* XLGestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLGestureViewController.h; sourceTree = "<group>"; };
+		5E66EC97260080F700E0BAC1 /* XLGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLGestureViewController.m; sourceTree = "<group>"; };
+		5E66ECA0260081C800E0BAC1 /* XLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLBaseViewController.h; sourceTree = "<group>"; };
+		5E66ECA1260081C800E0BAC1 /* XLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLBaseViewController.m; sourceTree = "<group>"; };
 		5ED9B7CB25FB5B3600A872BF /* XLCate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCate.h; sourceTree = "<group>"; };
 		5ED9B7CC25FB5B3600A872BF /* XLCate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLCate.m; sourceTree = "<group>"; };
 		5ED9B7D425FB5B5500A872BF /* XLCate+Run.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLCate+Run.h"; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 		5E58406225FA073B00F63B2B /* MyStudy */ = {
 			isa = PBXGroup;
 			children = (
+				5E66EC9F260081BC00E0BAC1 /* Base */,
+				5E66EC95260080D600E0BAC1 /* Gesture */,
 				5E66EC84260054DF00E0BAC1 /* Layout */,
 				5ED9B68225FB405900A872BF /* Runtime */,
 				5E5841B025FA09DA00F63B2B /* Creaters */,
@@ -218,6 +226,24 @@
 				5E66EC8D2600554400E0BAC1 /* XLFrameBoundsViewController.m */,
 			);
 			path = FrameBounds;
+			sourceTree = "<group>";
+		};
+		5E66EC95260080D600E0BAC1 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				5E66EC96260080F700E0BAC1 /* XLGestureViewController.h */,
+				5E66EC97260080F700E0BAC1 /* XLGestureViewController.m */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
+		5E66EC9F260081BC00E0BAC1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5E66ECA0260081C800E0BAC1 /* XLBaseViewController.h */,
+				5E66ECA1260081C800E0BAC1 /* XLBaseViewController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		5ED9B68225FB405900A872BF /* Runtime */ = {
@@ -384,8 +410,10 @@
 				5E66EC87260054F700E0BAC1 /* XLLayoutViewController.m in Sources */,
 				5E5841B325FA0A0400F63B2B /* XLButtonCreater.m in Sources */,
 				5E58406825FA073B00F63B2B /* SceneDelegate.m in Sources */,
+				5E66EC98260080F700E0BAC1 /* XLGestureViewController.m in Sources */,
 				5ED9B7CD25FB5B3600A872BF /* XLCate.m in Sources */,
 				5ED9B7DC25FB5B6200A872BF /* XLCate+Jump.m in Sources */,
+				5E66ECA2260081C800E0BAC1 /* XLBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

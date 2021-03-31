@@ -1,15 +1,15 @@
 //
-//  XLLayoutViewController.h
+//  XLBaseViewController.h
 //  MyStudy
 //
 //  Created by daiwei62 on 2021/3/16.
 //
 
-#import "XLBaseViewController.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XLLayoutViewController : UIViewController
+@interface XLBaseViewController : UIViewController
 
 @end
 

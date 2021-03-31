@@ -5,11 +5,11 @@
 //  Created by daiwei62 on 2021/3/12.
 //
 
-#import <UIKit/UIKit.h>
+#import "XLBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XLRuntimeViewController : UIViewController
+@interface XLRuntimeViewController : XLBaseViewController
 
 @end
 
