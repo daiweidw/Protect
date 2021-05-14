@@ -7,6 +7,7 @@
 
 #import "XLCollectionGreenSection.h"
 #import "XLCollectionViewCell.h"
+#import "UICollectionGreenHeaderView.h"
 
 @implementation XLCollectionGreenSection
 
@@ -38,11 +39,11 @@
 }
 
 - (CGFloat)heightForHeaderViewInsection{
-    return 0;
+    return 60;
 }
 
 - (UIEdgeInsets)edgeInsetsInsection{
-    return UIEdgeInsetsMake(0, 10, 0, 10);
+    return UIEdgeInsetsMake(5, 10, 0, 10);
 }
 
 - (CGFloat)spaceOfColumnInsection{
@@ -55,6 +56,24 @@
 
 - (CGFloat)heightForFooterViewInsection{
     return 0;
+}
+
+- (NSString *)reusableHeaderViewNameForRigisterInsection{
+    return @"UICollectionGreenHeaderView";
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if (kind == UICollectionElementKindSectionHeader){
+        UICollectionGreenHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"UICollectionGreenHeaderView" forIndexPath:indexPath];
+        [headerView updateTitle:@"这个一个绿色的开头"];
+        headerView.backgroundColor = [UIColor greenColor];
+        return headerView;
+    }
+    return nil;
+}
+
+- (BOOL)headerHockInSection{
+    return YES;
 }
 
 @end

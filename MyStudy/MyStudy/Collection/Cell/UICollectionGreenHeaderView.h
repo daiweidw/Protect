@@ -1,15 +1,15 @@
 //
-//  XLCollectionHeaderView.h
+//  UICollectionGreenHeaderView.h
 //  MyStudy
 //
-//  Created by daiwei62 on 2021/5/12.
+//  Created by daiwei62 on 2021/5/14.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XLCollectionHeaderView : UICollectionReusableView
+@interface UICollectionGreenHeaderView : UICollectionReusableView
 
 - (void)updateTitle:(NSString *)title;
 

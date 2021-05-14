@@ -19,6 +19,7 @@
 - (CGFloat)spaceOfColumnInSection:(NSInteger)section;
 - (CGFloat)spaceOfRowInSection:(NSInteger)section;
 - (CGFloat)heightForFooterViewInSection:(NSInteger)section;
+- (BOOL)headerHockInSection:(NSInteger)section;
 
 @end
 

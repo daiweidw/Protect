@@ -7,6 +7,7 @@
 
 #import "XLCollectionGraySection.h"
 #import "XLCollectionViewCell.h"
+#import "XLCollectionHeaderView.h"
 
 @implementation XLCollectionGraySection
 
@@ -34,11 +35,11 @@
 }
 
 - (CGFloat)heightForHeaderViewInsection{
-    return 0;
+    return 60;
 }
 
 - (UIEdgeInsets)edgeInsetsInsection{
-    return UIEdgeInsetsMake(0, 5, 0, 5);
+    return UIEdgeInsetsMake(5, 5, 0, 5);
 }
 
 - (CGFloat)spaceOfColumnInsection{
@@ -51,6 +52,24 @@
 
 - (CGFloat)heightForFooterViewInsection{
     return 0;
+}
+
+- (NSString *)reusableHeaderViewNameForRigisterInsection{
+    return @"XLCollectionHeaderView";
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if (kind == UICollectionElementKindSectionHeader){
+        XLCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"XLCollectionHeaderView" forIndexPath:indexPath];
+        [headerView updateTitle:@"这个一个灰色的开头"];
+        headerView.backgroundColor = [UIColor grayColor];
+        return headerView;
+    }
+    return nil;
+}
+
+- (BOOL)headerHockInSection{
+    return YES;
 }
 
 @end

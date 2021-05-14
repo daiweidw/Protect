@@ -38,6 +38,7 @@
 		5ED9B7D625FB5B5500A872BF /* XLCate+Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7D525FB5B5500A872BF /* XLCate+Run.m */; };
 		5ED9B7DC25FB5B6200A872BF /* XLCate+Jump.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7DB25FB5B6200A872BF /* XLCate+Jump.m */; };
 		5ED9B7E225FB5C4000A872BF /* XLRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7E125FB5C4000A872BF /* XLRuntimeViewController.m */; };
+		5EFD8B10264E26FD0055F24A /* UICollectionGreenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD8B0F264E26FD0055F24A /* UICollectionGreenHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		5ED9B7DB25FB5B6200A872BF /* XLCate+Jump.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XLCate+Jump.m"; sourceTree = "<group>"; };
 		5ED9B7E025FB5C4000A872BF /* XLRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLRuntimeViewController.h; sourceTree = "<group>"; };
 		5ED9B7E125FB5C4000A872BF /* XLRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLRuntimeViewController.m; sourceTree = "<group>"; };
+		5EFD8B0E264E26FD0055F24A /* UICollectionGreenHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionGreenHeaderView.h; sourceTree = "<group>"; };
+		5EFD8B0F264E26FD0055F24A /* UICollectionGreenHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionGreenHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				5E2546B7264A651C00CBF0B3 /* XLCollectionViewCell.m */,
 				5EAC9E53264BDF0D00A662AC /* XLCollectionHeaderView.h */,
 				5EAC9E54264BDF0D00A662AC /* XLCollectionHeaderView.m */,
+				5EFD8B0E264E26FD0055F24A /* UICollectionGreenHeaderView.h */,
+				5EFD8B0F264E26FD0055F24A /* UICollectionGreenHeaderView.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 				5E5841B925FA0A1700F63B2B /* XLMouseTestPosion.m in Sources */,
 				5E58407625FA073D00F63B2B /* main.m in Sources */,
 				5ED9B7D625FB5B5500A872BF /* XLCate+Run.m in Sources */,
+				5EFD8B10264E26FD0055F24A /* UICollectionGreenHeaderView.m in Sources */,
 				5E2546B1264A5E5800CBF0B3 /* XLCollectionViewController.m in Sources */,
 				5E66EC87260054F700E0BAC1 /* XLLayoutViewController.m in Sources */,
 				5E2546C2264A8E7A00CBF0B3 /* XLCollectionViewLayout.m in Sources */,

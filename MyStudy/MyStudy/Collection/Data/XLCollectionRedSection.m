@@ -7,6 +7,7 @@
 
 #import "XLCollectionRedSection.h"
 #import "XLCollectionViewCell.h"
+#import "XLCollectionHeaderView.h"
 
 @implementation XLCollectionRedSection
 
@@ -34,7 +35,7 @@
 }
 
 - (CGFloat)heightForHeaderViewInsection{
-    return 0;
+    return 60;
 }
 
 - (UIEdgeInsets)edgeInsetsInsection{
@@ -51,6 +52,24 @@
 
 - (CGFloat)heightForFooterViewInsection{
     return 0;
+}
+
+- (NSString *)reusableHeaderViewNameForRigisterInsection{
+    return @"XLCollectionHeaderView";
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if (kind == UICollectionElementKindSectionHeader){
+        XLCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"XLCollectionHeaderView" forIndexPath:indexPath];
+        [headerView updateTitle:@"这个一个红色的开头"];
+        headerView.backgroundColor = [UIColor redColor];
+        return headerView;
+    }
+    return nil;
+}
+
+- (BOOL)headerHockInSection{
+    return YES;
 }
 
 @end

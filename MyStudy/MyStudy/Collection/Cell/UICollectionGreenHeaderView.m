@@ -1,19 +1,19 @@
 //
-//  XLCollectionHeaderView.m
+//  UICollectionGreenHeaderView.m
 //  MyStudy
 //
-//  Created by daiwei62 on 2021/5/12.
+//  Created by daiwei62 on 2021/5/14.
 //
 
-#import "XLCollectionHeaderView.h"
+#import "UICollectionGreenHeaderView.h"
 
-@interface XLCollectionHeaderView ()
+@interface UICollectionGreenHeaderView ()
 
 @property (nonatomic, strong) UILabel *titleLab;
 
 @end
 
-@implementation XLCollectionHeaderView
+@implementation UICollectionGreenHeaderView
 
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

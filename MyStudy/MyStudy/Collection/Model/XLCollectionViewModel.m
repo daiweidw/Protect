@@ -35,6 +35,7 @@
 - (void)setSectionModels:(NSArray<id<XLCollectionSectionDelegate>> *)sectionModels{
     _sectionModels = [NSArray arrayWithArray:sectionModels];
     [self registerCellName];
+    [self registerReusebleView];
     [self.collectionView reloadData];
 }
 
@@ -49,6 +50,26 @@
         }
         [self.collectionView registerClass:NSClassFromString(tmpName) forCellWithReuseIdentifier:tmpName];
     }
+}
+
+- (void)registerReusebleView{
+    for (id<XLCollectionSectionDelegate> tmpModel in self.sectionModels) {
+        if ([tmpModel respondsToSelector:@selector(reusableHeaderViewNameForRigisterInsection)]) {
+            NSString *tmpName = [tmpModel reusableHeaderViewNameForRigisterInsection];
+            if (tmpName.length > 0) {
+                [self.collectionView registerClass:NSClassFromString(tmpName) forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:tmpName];
+            }
+        }
+        if ([tmpModel respondsToSelector:@selector(reusableFooterViewNameForRigisterInsection)]) {
+            NSString *tmpName = [tmpModel reusableFooterViewNameForRigisterInsection];
+            if (tmpName.length > 0) {
+                [self.collectionView registerClass:NSClassFromString(tmpName) forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:tmpName];
+            }
+        }
+    }
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"UICollectionReusableView"];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"UICollectionReusableView"];
+    
 }
 
 #pragma mark - XLCollectionViewLayoutDelegate
@@ -117,8 +138,44 @@
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
-//- (CGFloat)heightForHeaderViewInSection:(NSInteger)section;
-//- (CGFloat)heightForFooterViewInSection:(NSInteger)section;
+- (CGFloat)heightForHeaderViewInSection:(NSInteger)section{
+    if (section >= self.sectionModels.count) {
+        return 0;
+    }
+    
+    id<XLCollectionSectionDelegate> tmpSectionM = self.sectionModels[section];
+    if ([tmpSectionM respondsToSelector:@selector(heightForHeaderViewInsection)]) {
+        return [tmpSectionM heightForHeaderViewInsection];
+    }
+    
+    return 0;
+}
+
+- (CGFloat)heightForFooterViewInSection:(NSInteger)section{
+    if (section >= self.sectionModels.count) {
+        return 0;
+    }
+    
+    id<XLCollectionSectionDelegate> tmpSectionM = self.sectionModels[section];
+    if ([tmpSectionM respondsToSelector:@selector(heightForFooterViewInsection)]) {
+        return [tmpSectionM heightForFooterViewInsection];
+    }
+    
+    return 0;
+}
+
+- (BOOL)headerHockInSection:(NSInteger)section{
+    if (section >= self.sectionModels.count) {
+        return NO;
+    }
+    
+    id<XLCollectionSectionDelegate> tmpSectionM = self.sectionModels[section];
+    if ([tmpSectionM respondsToSelector:@selector(headerHockInSection)]) {
+        return [tmpSectionM headerHockInSection];
+    }
+    
+    return NO;
+}
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -152,11 +209,22 @@
     return self.sectionModels.count;
 }
 
-/*
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"UICollectionReusableView" forIndexPath:indexPath];
+    if (indexPath.section >= self.sectionModels.count) {
+        return view;
+    }
     
+    id<XLCollectionSectionDelegate> tmpSectionM = self.sectionModels[indexPath.section];
+    if ([tmpSectionM respondsToSelector:@selector(collectionView:viewForSupplementaryElementOfKind:atIndexPath:)]) {
+        UICollectionReusableView *tmpView = [tmpSectionM collectionView:collectionView viewForSupplementaryElementOfKind:kind atIndexPath:indexPath];
+        if (tmpView && [tmpView isKindOfClass:[UICollectionReusableView class]]) {
+            view = tmpView;
+        }
+    }
+    
+    return view;
 }
- */
 
 #pragma mark - UICollectionViewDelegate
 

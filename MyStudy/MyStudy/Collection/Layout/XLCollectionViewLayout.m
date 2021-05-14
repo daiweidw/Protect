@@ -39,7 +39,7 @@
         
         if (headerInsection > 0) {
             UICollectionViewLayoutAttributes *headerAttrs = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:[NSIndexPath indexPathWithIndex:i]];
-            headerAttrs.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, headerInsection);
+            headerAttrs.frame = CGRectMake(0, self.contentHeight + edgeInsetInsection.top, [[UIScreen mainScreen] bounds].size.width, headerInsection);
             [self.attributesArray addObject:headerAttrs];
         }
         
@@ -62,6 +62,7 @@
 }
 
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
+    [self sectionHeaderStickCounter];
     return self.attributesArray;
 }
 
@@ -117,7 +118,84 @@
     return CGSizeMake(0, self.contentHeight);
 }
 
-#pragma mark -
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
+{
+    return YES;
+}
+
+#pragma mark - headerview悬停
+- (void)sectionHeaderStickCounter
+{
+    NSMutableArray *tmpHeaderAttrs = [NSMutableArray array];
+    for (UICollectionViewLayoutAttributes *layoutAttributes in self.attributesArray) {
+        if (![self headerHockInSection:layoutAttributes.indexPath.section]) {
+            continue;
+        }
+        if ([layoutAttributes.representedElementKind isEqualToString:UICollectionElementKindSectionHeader]) {
+            [tmpHeaderAttrs addObject:layoutAttributes];
+        }
+    }
+    
+    if (tmpHeaderAttrs.count == 0) {
+        return;
+    }
+    
+    CGFloat offsetY = self.collectionView.contentOffset.y;
+    if (tmpHeaderAttrs.count == 1) {
+        UICollectionViewLayoutAttributes *layoutAttributes = tmpHeaderAttrs[0];
+        CGPoint origin = layoutAttributes.frame.origin;
+        origin.y = offsetY;
+        layoutAttributes.zIndex = 2048;
+        layoutAttributes.frame = (CGRect){
+            .origin = origin,
+            .size =CGSizeMake(layoutAttributes.frame.size.width, layoutAttributes.frame.size.height)
+        };
+        
+        return;
+    }
+    
+    for (NSInteger i=0; i<tmpHeaderAttrs.count; i++) {
+        UICollectionViewLayoutAttributes *layoutAttributes = tmpHeaderAttrs[i];
+        CGFloat tmpAH = layoutAttributes.frame.size.height;
+        
+        if ((i+1) < tmpHeaderAttrs.count) {
+            UICollectionViewLayoutAttributes *nextAttributes = tmpHeaderAttrs[i+1];
+            CGFloat nextAY = nextAttributes.frame.origin.y;
+            CGFloat nextAH = nextAttributes.frame.size.height;
+            
+            if ((offsetY+tmpAH) <= nextAY) {
+                CGPoint origin = layoutAttributes.frame.origin;
+                origin.y = offsetY;
+                layoutAttributes.zIndex = 2048;
+                layoutAttributes.frame = (CGRect){
+                    .origin = origin,
+                    .size =CGSizeMake(layoutAttributes.frame.size.width, layoutAttributes.frame.size.height)
+                };
+                return;
+            }else if ((offsetY+tmpAH) < (nextAY+nextAH)){
+                CGFloat spaceH = offsetY+tmpAH-nextAY;
+                CGPoint origin = layoutAttributes.frame.origin;
+                origin.y = offsetY-spaceH;
+                layoutAttributes.zIndex = 2048;
+                layoutAttributes.frame = (CGRect){
+                    .origin = origin,
+                    .size =CGSizeMake(layoutAttributes.frame.size.width, layoutAttributes.frame.size.height)
+                };
+                return;
+            }
+        }else{
+            CGPoint origin = layoutAttributes.frame.origin;
+            origin.y = offsetY;
+            layoutAttributes.zIndex = 2048;
+            layoutAttributes.frame = (CGRect){
+                .origin = origin,
+                .size =CGSizeMake(layoutAttributes.frame.size.width, layoutAttributes.frame.size.height)
+            };
+        }
+    }
+}
+
+#pragma mark - 配置参数
 - (NSInteger)numberOfColumnInSection:(NSInteger)section{
     if (self.xldelegate && [self.xldelegate respondsToSelector:@selector(numberOfColumnInSection:)]) {
         return [self.xldelegate numberOfColumnInSection:section];
@@ -165,6 +243,13 @@
         return [self.xldelegate heightForFooterViewInSection:section];
     }
     return 0;
+}
+
+- (BOOL)headerHockInSection:(NSInteger)section{
+    if (self.xldelegate && [self.xldelegate respondsToSelector:@selector(headerHockInSection:)]) {
+        return [self.xldelegate headerHockInSection:section];
+    }
+    return NO;
 }
 
 #pragma mark -

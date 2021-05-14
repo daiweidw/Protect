@@ -25,6 +25,10 @@
 - (CGFloat)spaceOfColumnInsection;
 - (CGFloat)spaceOfRowInsection;
 - (CGFloat)heightForFooterViewInsection;
+- (NSString *)reusableHeaderViewNameForRigisterInsection;
+- (NSString *)reusableFooterViewNameForRigisterInsection;
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)headerHockInSection;
 
 @end
 
