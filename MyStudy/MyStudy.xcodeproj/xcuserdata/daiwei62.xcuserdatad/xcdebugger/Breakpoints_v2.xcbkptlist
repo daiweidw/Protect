@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8F606FF8-748C-4F6A-AF0F-48A5CF2E3905"
+            uuid = "AA36DD58-25A4-4F1D-B187-E47F3CF38C3F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyStudy/ViewController.m"
+            filePath = "MyStudy/Collection/Layout/XLCollectionViewLayout.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-jumpToAlgorithm"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-layoutAttributesForElementsInRect:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

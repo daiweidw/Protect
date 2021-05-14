@@ -9,6 +9,7 @@
 #import "XLAlgorithmViewController.h"
 #import "XLRuntimeViewController.h"
 #import "XLLayoutViewController.h"
+#import "XLCollectionViewController.h"
 
 #import "XLButtonCreater.h"
 
@@ -42,6 +43,12 @@
     frame = CGRectMake(100, y, 100, 20);
     UIButton *layoutButton = [XLButtonCreater createJumpButtonWithTitle:@"布局" frame:frame target:self action:@selector(jumpToLayout)];
     [self.view addSubview:layoutButton];
+    
+    y += 40;
+    
+    frame = CGRectMake(100, y, 100, 20);
+    UIButton *flowButton = [XLButtonCreater createJumpButtonWithTitle:@"瀑布流" frame:frame target:self action:@selector(jumpToFlow)];
+    [self.view addSubview:flowButton];
 }
 
 #pragma mark - actions
@@ -57,6 +64,11 @@
 
 - (void)jumpToLayout{
     XLLayoutViewController *vc = [[XLLayoutViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)jumpToFlow{
+    XLCollectionViewController *vc = [[XLCollectionViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

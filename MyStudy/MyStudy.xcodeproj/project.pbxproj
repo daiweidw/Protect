@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2546B1264A5E5800CBF0B3 /* XLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2546B0264A5E5800CBF0B3 /* XLCollectionViewController.m */; };
+		5E2546B8264A651C00CBF0B3 /* XLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2546B7264A651C00CBF0B3 /* XLCollectionViewCell.m */; };
+		5E2546C2264A8E7A00CBF0B3 /* XLCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2546C1264A8E7A00CBF0B3 /* XLCollectionViewLayout.m */; };
 		5E58406525FA073B00F63B2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E58406425FA073B00F63B2B /* AppDelegate.m */; };
 		5E58406825FA073B00F63B2B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E58406725FA073B00F63B2B /* SceneDelegate.m */; };
 		5E58406B25FA073B00F63B2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E58406A25FA073B00F63B2B /* ViewController.m */; };
@@ -24,6 +27,13 @@
 		5E66EC8E2600554400E0BAC1 /* XLFrameBoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66EC8D2600554400E0BAC1 /* XLFrameBoundsViewController.m */; };
 		5E66EC98260080F700E0BAC1 /* XLGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66EC97260080F700E0BAC1 /* XLGestureViewController.m */; };
 		5E66ECA2260081C800E0BAC1 /* XLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66ECA1260081C800E0BAC1 /* XLBaseViewController.m */; };
+		5EAC9E55264BDF0D00A662AC /* XLCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC9E54264BDF0D00A662AC /* XLCollectionHeaderView.m */; };
+		5ED86958264CCCF9007F09C3 /* XLCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED86955264CCCF9007F09C3 /* XLCollectionViewModel.m */; };
+		5ED86959264CCCF9007F09C3 /* XLCollectionSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED86957264CCCF9007F09C3 /* XLCollectionSectionModel.m */; };
+		5ED86A2F264D03DD007F09C3 /* XLCollectionGreenSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED86A2C264D03DD007F09C3 /* XLCollectionGreenSection.m */; };
+		5ED86A30264D03DD007F09C3 /* XLCollectionRedSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED86A2D264D03DD007F09C3 /* XLCollectionRedSection.m */; };
+		5ED86A31264D03DD007F09C3 /* XLCollectionGraySection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED86A2E264D03DD007F09C3 /* XLCollectionGraySection.m */; };
+		5ED86A37264D04C3007F09C3 /* XLCollectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED86A36264D04C3007F09C3 /* XLCollectionDataModel.m */; };
 		5ED9B7CD25FB5B3600A872BF /* XLCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7CC25FB5B3600A872BF /* XLCate.m */; };
 		5ED9B7D625FB5B5500A872BF /* XLCate+Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7D525FB5B5500A872BF /* XLCate+Run.m */; };
 		5ED9B7DC25FB5B6200A872BF /* XLCate+Jump.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9B7DB25FB5B6200A872BF /* XLCate+Jump.m */; };
@@ -48,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E2546AF264A5E5800CBF0B3 /* XLCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCollectionViewController.h; sourceTree = "<group>"; };
+		5E2546B0264A5E5800CBF0B3 /* XLCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLCollectionViewController.m; sourceTree = "<group>"; };
+		5E2546B6264A651C00CBF0B3 /* XLCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCollectionViewCell.h; sourceTree = "<group>"; };
+		5E2546B7264A651C00CBF0B3 /* XLCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLCollectionViewCell.m; sourceTree = "<group>"; };
+		5E2546C0264A8E7A00CBF0B3 /* XLCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCollectionViewLayout.h; sourceTree = "<group>"; };
+		5E2546C1264A8E7A00CBF0B3 /* XLCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLCollectionViewLayout.m; sourceTree = "<group>"; };
 		5E58406025FA073B00F63B2B /* MyStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E58406325FA073B00F63B2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E58406425FA073B00F63B2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +98,21 @@
 		5E66EC97260080F700E0BAC1 /* XLGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLGestureViewController.m; sourceTree = "<group>"; };
 		5E66ECA0260081C800E0BAC1 /* XLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLBaseViewController.h; sourceTree = "<group>"; };
 		5E66ECA1260081C800E0BAC1 /* XLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLBaseViewController.m; sourceTree = "<group>"; };
+		5EAC9E53264BDF0D00A662AC /* XLCollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCollectionHeaderView.h; sourceTree = "<group>"; };
+		5EAC9E54264BDF0D00A662AC /* XLCollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLCollectionHeaderView.m; sourceTree = "<group>"; };
+		5ED86954264CCCF9007F09C3 /* XLCollectionSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCollectionSectionModel.h; sourceTree = "<group>"; };
+		5ED86955264CCCF9007F09C3 /* XLCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCollectionViewModel.m; sourceTree = "<group>"; };
+		5ED86956264CCCF9007F09C3 /* XLCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCollectionViewModel.h; sourceTree = "<group>"; };
+		5ED86957264CCCF9007F09C3 /* XLCollectionSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCollectionSectionModel.m; sourceTree = "<group>"; };
+		5ED86960264CF405007F09C3 /* XLCollectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCollectionProtocol.h; sourceTree = "<group>"; };
+		5ED86A29264D03DD007F09C3 /* XLCollectionGreenSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCollectionGreenSection.h; sourceTree = "<group>"; };
+		5ED86A2A264D03DD007F09C3 /* XLCollectionGraySection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCollectionGraySection.h; sourceTree = "<group>"; };
+		5ED86A2B264D03DD007F09C3 /* XLCollectionRedSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCollectionRedSection.h; sourceTree = "<group>"; };
+		5ED86A2C264D03DD007F09C3 /* XLCollectionGreenSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCollectionGreenSection.m; sourceTree = "<group>"; };
+		5ED86A2D264D03DD007F09C3 /* XLCollectionRedSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCollectionRedSection.m; sourceTree = "<group>"; };
+		5ED86A2E264D03DD007F09C3 /* XLCollectionGraySection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCollectionGraySection.m; sourceTree = "<group>"; };
+		5ED86A35264D04C3007F09C3 /* XLCollectionDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCollectionDataModel.h; sourceTree = "<group>"; };
+		5ED86A36264D04C3007F09C3 /* XLCollectionDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLCollectionDataModel.m; sourceTree = "<group>"; };
 		5ED9B7CB25FB5B3600A872BF /* XLCate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLCate.h; sourceTree = "<group>"; };
 		5ED9B7CC25FB5B3600A872BF /* XLCate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLCate.m; sourceTree = "<group>"; };
 		5ED9B7D425FB5B5500A872BF /* XLCate+Run.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLCate+Run.h"; sourceTree = "<group>"; };
@@ -117,6 +148,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2546A5264A5DA400CBF0B3 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				5ED86A28264D03DD007F09C3 /* Data */,
+				5ED86953264CCCF9007F09C3 /* Model */,
+				5E2546BF264A854500CBF0B3 /* Layout */,
+				5E2546B5264A650600CBF0B3 /* Cell */,
+				5E2546AF264A5E5800CBF0B3 /* XLCollectionViewController.h */,
+				5E2546B0264A5E5800CBF0B3 /* XLCollectionViewController.m */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		5E2546B5264A650600CBF0B3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E2546B6264A651C00CBF0B3 /* XLCollectionViewCell.h */,
+				5E2546B7264A651C00CBF0B3 /* XLCollectionViewCell.m */,
+				5EAC9E53264BDF0D00A662AC /* XLCollectionHeaderView.h */,
+				5EAC9E54264BDF0D00A662AC /* XLCollectionHeaderView.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5E2546BF264A854500CBF0B3 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				5E2546C0264A8E7A00CBF0B3 /* XLCollectionViewLayout.h */,
+				5E2546C1264A8E7A00CBF0B3 /* XLCollectionViewLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		5E58405725FA073B00F63B2B = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +204,7 @@
 		5E58406225FA073B00F63B2B /* MyStudy */ = {
 			isa = PBXGroup;
 			children = (
+				5E2546A5264A5DA400CBF0B3 /* Collection */,
 				5E66EC9F260081BC00E0BAC1 /* Base */,
 				5E66EC95260080D600E0BAC1 /* Gesture */,
 				5E66EC84260054DF00E0BAC1 /* Layout */,
@@ -244,6 +309,33 @@
 				5E66ECA1260081C800E0BAC1 /* XLBaseViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		5ED86953264CCCF9007F09C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ED86954264CCCF9007F09C3 /* XLCollectionSectionModel.h */,
+				5ED86957264CCCF9007F09C3 /* XLCollectionSectionModel.m */,
+				5ED86956264CCCF9007F09C3 /* XLCollectionViewModel.h */,
+				5ED86955264CCCF9007F09C3 /* XLCollectionViewModel.m */,
+				5ED86960264CF405007F09C3 /* XLCollectionProtocol.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5ED86A28264D03DD007F09C3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5ED86A2A264D03DD007F09C3 /* XLCollectionGraySection.h */,
+				5ED86A2E264D03DD007F09C3 /* XLCollectionGraySection.m */,
+				5ED86A29264D03DD007F09C3 /* XLCollectionGreenSection.h */,
+				5ED86A2C264D03DD007F09C3 /* XLCollectionGreenSection.m */,
+				5ED86A2B264D03DD007F09C3 /* XLCollectionRedSection.h */,
+				5ED86A2D264D03DD007F09C3 /* XLCollectionRedSection.m */,
+				5ED86A35264D04C3007F09C3 /* XLCollectionDataModel.h */,
+				5ED86A36264D04C3007F09C3 /* XLCollectionDataModel.m */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		5ED9B68225FB405900A872BF /* Runtime */ = {
@@ -399,20 +491,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5841C225FA0A4D00F63B2B /* XLAlgorithmViewController.m in Sources */,
+				5ED86959264CCCF9007F09C3 /* XLCollectionSectionModel.m in Sources */,
 				5E58406B25FA073B00F63B2B /* ViewController.m in Sources */,
 				5E58406525FA073B00F63B2B /* AppDelegate.m in Sources */,
 				5E66EC8E2600554400E0BAC1 /* XLFrameBoundsViewController.m in Sources */,
+				5ED86A37264D04C3007F09C3 /* XLCollectionDataModel.m in Sources */,
 				5ED9B7E225FB5C4000A872BF /* XLRuntimeViewController.m in Sources */,
 				5E5841CB25FA1D7A00F63B2B /* XLAlgorithm.m in Sources */,
+				5E2546B8264A651C00CBF0B3 /* XLCollectionViewCell.m in Sources */,
+				5EAC9E55264BDF0D00A662AC /* XLCollectionHeaderView.m in Sources */,
 				5E5841B925FA0A1700F63B2B /* XLMouseTestPosion.m in Sources */,
 				5E58407625FA073D00F63B2B /* main.m in Sources */,
 				5ED9B7D625FB5B5500A872BF /* XLCate+Run.m in Sources */,
+				5E2546B1264A5E5800CBF0B3 /* XLCollectionViewController.m in Sources */,
 				5E66EC87260054F700E0BAC1 /* XLLayoutViewController.m in Sources */,
+				5E2546C2264A8E7A00CBF0B3 /* XLCollectionViewLayout.m in Sources */,
 				5E5841B325FA0A0400F63B2B /* XLButtonCreater.m in Sources */,
 				5E58406825FA073B00F63B2B /* SceneDelegate.m in Sources */,
 				5E66EC98260080F700E0BAC1 /* XLGestureViewController.m in Sources */,
+				5ED86958264CCCF9007F09C3 /* XLCollectionViewModel.m in Sources */,
+				5ED86A30264D03DD007F09C3 /* XLCollectionRedSection.m in Sources */,
 				5ED9B7CD25FB5B3600A872BF /* XLCate.m in Sources */,
 				5ED9B7DC25FB5B6200A872BF /* XLCate+Jump.m in Sources */,
+				5ED86A2F264D03DD007F09C3 /* XLCollectionGreenSection.m in Sources */,
+				5ED86A31264D03DD007F09C3 /* XLCollectionGraySection.m in Sources */,
 				5E66ECA2260081C800E0BAC1 /* XLBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
