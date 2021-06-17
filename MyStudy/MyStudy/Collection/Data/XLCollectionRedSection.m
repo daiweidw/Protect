@@ -8,6 +8,7 @@
 #import "XLCollectionRedSection.h"
 #import "XLCollectionViewCell.h"
 #import "XLCollectionHeaderView.h"
+#import "XLCollectionFooterView.h"
 
 @implementation XLCollectionRedSection
 
@@ -51,11 +52,15 @@
 }
 
 - (CGFloat)heightForFooterViewInsection{
-    return 0;
+    return 40;
 }
 
 - (NSString *)reusableHeaderViewNameForRigisterInsection{
     return @"XLCollectionHeaderView";
+}
+
+- (NSString *)reusableFooterViewNameForRigisterInsection{
+    return @"XLCollectionFooterView";
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -64,6 +69,11 @@
         [headerView updateTitle:@"这个一个红色的开头"];
         headerView.backgroundColor = [UIColor redColor];
         return headerView;
+    }else if (kind == UICollectionElementKindSectionFooter){
+        XLCollectionFooterView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"XLCollectionFooterView" forIndexPath:indexPath];
+        [footerView updateTitle:@"这个一个红色的结尾"];
+        footerView.backgroundColor = [UIColor redColor];
+        return footerView;
     }
     return nil;
 }

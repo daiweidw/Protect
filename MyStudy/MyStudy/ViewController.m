@@ -10,6 +10,9 @@
 #import "XLRuntimeViewController.h"
 #import "XLLayoutViewController.h"
 #import "XLCollectionViewController.h"
+#import "XLCAGradientLayerVC.h"
+#import "XLUITextViewController.h"
+#import "XLUILabelViewController.h"
 
 #import "XLButtonCreater.h"
 
@@ -49,6 +52,24 @@
     frame = CGRectMake(100, y, 100, 20);
     UIButton *flowButton = [XLButtonCreater createJumpButtonWithTitle:@"瀑布流" frame:frame target:self action:@selector(jumpToFlow)];
     [self.view addSubview:flowButton];
+    
+    y += 40;
+    
+    frame = CGRectMake(100, y, 100, 20);
+    UIButton *gradientButton = [XLButtonCreater createJumpButtonWithTitle:@"gradient" frame:frame target:self action:@selector(jumpToGradient)];
+    [self.view addSubview:gradientButton];
+    
+    y += 40;
+    
+    frame = CGRectMake(100, y, 100, 20);
+    UIButton *textButton = [XLButtonCreater createJumpButtonWithTitle:@"文本1" frame:frame target:self action:@selector(jumpToText)];
+    [self.view addSubview:textButton];
+    
+    y += 40;
+    
+    frame = CGRectMake(100, y, 100, 20);
+    UIButton *labelButton = [XLButtonCreater createJumpButtonWithTitle:@"文本2" frame:frame target:self action:@selector(jumpToLabel)];
+    [self.view addSubview:labelButton];
 }
 
 #pragma mark - actions
@@ -69,6 +90,21 @@
 
 - (void)jumpToFlow{
     XLCollectionViewController *vc = [[XLCollectionViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)jumpToGradient{
+    XLCAGradientLayerVC *vc = [[XLCAGradientLayerVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)jumpToText{
+    XLUITextViewController *vc = [[XLUITextViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)jumpToLabel{
+    XLUILabelViewController *vc = [[XLUILabelViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
